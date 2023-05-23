@@ -1,0 +1,22 @@
+appId: com.chameleoncrypt.app
+productName: ChameleonCrypt
+copyright: Copyright © 2023 ChameleonCrypt
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
+
+linux:
+  target: appimage
+
+win:
+  target: nsis
+
+nsis:
+  oneClick: false
+  perMachine: true

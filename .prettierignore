@@ -1,0 +1,8 @@
+# directories
+renderer/.next
+renderer/public
+
+# config files
+next-env.d.ts
+next.config.js
+tsconfig.json
