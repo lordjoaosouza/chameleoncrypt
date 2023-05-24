@@ -7,7 +7,7 @@ import {
   UpdatesTitle,
   UpdatesInfoContainer,
   UpdatesInfo,
-  UptatesTitleContainer,
+  UpdatesTitleContainer,
 } from './style'
 import updatesInfos from '../../data/updates.json'
 
@@ -19,9 +19,9 @@ export default function Hero() {
         <Image src='illustration.svg' alt='illustration' />
       </InfoContainer>
       <UpdatesContainer>
-        <UptatesTitleContainer>
+        <UpdatesTitleContainer>
           <UpdatesTitle>Últimas atualizações</UpdatesTitle>
-        </UptatesTitleContainer>
+        </UpdatesTitleContainer>
         <UpdatesInfoContainer>
           {updatesInfos.map((update, index) => (
             <UpdatesInfo key={index}>

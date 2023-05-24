@@ -1,23 +1,30 @@
 import { Container, Logo, Buttons, Button } from './style'
 import { HiLockClosed, HiLockOpen } from 'react-icons/hi'
 import { MdPassword } from 'react-icons/md'
+import { useRouter } from 'next/router'
 
 export default function Navbar() {
+  const router = useRouter()
+
+  const handlePageClick = (page) => {
+    router.push(`/${page}`)
+  }
+
   return (
     <Container>
-      <a href='home'>
+      <a onClick={() => handlePageClick('home')}>
         <Logo src='logo.svg' />
       </a>
       <Buttons>
-        <Button href='encryption'>
+        <Button onClick={() => handlePageClick('encrypt')}>
           <HiLockOpen />
           Criptografar
         </Button>
-        <Button href='decryption'>
+        <Button onClick={() => handlePageClick('home')}>
           <HiLockClosed />
           Descriptografar
         </Button>
-        <Button href='password-vault'>
+        <Button onClick={() => handlePageClick('home')}>
           <MdPassword />
           Cofre de Senhas
         </Button>

@@ -59,7 +59,7 @@ export const UpdatesContainer = styled.div`
   position: relative;
 `
 
-export const UptatesTitleContainer = styled.div`
+export const UpdatesTitleContainer = styled.div`
   display: flex;
   justify-content: center;
   position: sticky;
