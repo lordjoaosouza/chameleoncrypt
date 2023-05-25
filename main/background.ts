@@ -14,11 +14,12 @@ if (isProd) {
   await app.whenReady();
 
   const mainWindow = createWindow('main', {
-    width: 1000,
-    height: 600,
+    width: 1200,
+    height: 700,
   });
 
   mainWindow.setResizable(false);
+  mainWindow.setMenuBarVisibility(false);
 
   if (isProd) {
     await mainWindow.loadURL('app://./home.html');

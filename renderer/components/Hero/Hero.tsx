@@ -16,7 +16,7 @@ export default function Hero() {
     <Container>
       <InfoContainer>
         <Info>Comece a proteger suas informações!</Info>
-        <Image src='illustration.svg' alt='illustration' />
+        <Image src='hero.svg' alt='hero' />
       </InfoContainer>
       <UpdatesContainer>
         <UpdatesTitleContainer>

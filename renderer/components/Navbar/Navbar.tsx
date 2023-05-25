@@ -20,11 +20,11 @@ export default function Navbar() {
           <HiLockOpen />
           Criptografar
         </Button>
-        <Button onClick={() => handlePageClick('home')}>
+        <Button onClick={() => handlePageClick('production')}>
           <HiLockClosed />
           Descriptografar
         </Button>
-        <Button onClick={() => handlePageClick('home')}>
+        <Button onClick={() => handlePageClick('production')}>
           <MdPassword />
           Cofre de Senhas
         </Button>
