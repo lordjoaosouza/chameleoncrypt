@@ -56,6 +56,11 @@ export const UpdatesContainer = styled.div`
   &::-webkit-scrollbar-track {
     background-color: #1e0127;
   }
+
+  &:hover {
+    scale: 1.05;
+    transition: 0.25s;
+  }
   position: relative;
 `
 
@@ -89,8 +94,4 @@ export const UpdatesInfoContainer = styled.div`
 export const UpdatesInfo = styled.p`
   font-size: 0.7rem;
   font-weight: normal;
-  &:hover {
-    scale: 1.05;
-    transition: 0.25s;
-  }
 `

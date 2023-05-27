@@ -20,7 +20,7 @@ export default function Navbar() {
           <HiLockOpen />
           Criptografar
         </Button>
-        <Button onClick={() => handlePageClick('production')}>
+        <Button onClick={() => handlePageClick('decrypt')}>
           <HiLockClosed />
           Descriptografar
         </Button>

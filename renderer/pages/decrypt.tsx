@@ -8,15 +8,15 @@ export default function Encrypt() {
   return (
     <React.Fragment>
       <Head>
-        <title>ChameleonCrypt - Criptografar</title>
+        <title>ChameleonCrypt - Descriptografar</title>
       </Head>
       <GlobalStyle />
       <Navbar />
       <EncryptDecrypt
-        title='Criptografe'
-        actionTitle='criptografia'
-        icon='HiLockClosed'
-        buttonText='Criptografar'
+        title='Descriptografe'
+        actionTitle='descriptografia'
+        icon='HiLockOpen'
+        buttonText='Descriptografar'
       />
     </React.Fragment>
   )
