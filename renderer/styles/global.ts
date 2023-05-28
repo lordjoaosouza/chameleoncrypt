@@ -6,6 +6,10 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
+
+        --webkit-user-select: none;
+        --ms-user-select: none;
+        user-select: none;
     }
 
     html {

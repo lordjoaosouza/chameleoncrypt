@@ -43,19 +43,6 @@ export const UpdatesContainer = styled.div`
   width: 25rem;
   height: 15rem;
   overflow: auto;
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #810ca8;
-    border-radius: 4px;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: #aa10de;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: #1e0127;
-  }
 
   &:hover {
     scale: 1.05;
@@ -67,7 +54,6 @@ export const UpdatesContainer = styled.div`
 export const UpdatesTitleContainer = styled.div`
   display: flex;
   justify-content: center;
-  position: sticky;
   padding: 1.5rem;
   top: 0;
   width: 100%;
@@ -89,9 +75,30 @@ export const UpdatesInfoContainer = styled.div`
   text-align: start;
   gap: 0.25rem;
   margin-bottom: 1.5rem;
+  overflow: auto;
+  padding: 0 1rem;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #810ca8;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #aa10de;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #1e0127;
+  }
 `
 
 export const UpdatesInfo = styled.p`
   font-size: 0.7rem;
   font-weight: normal;
+
+  &:hover {
+    scale: 1.05;
+    transition: 0.25s;
+  }
 `
