@@ -9,7 +9,7 @@ import {
   UpdatesInfo,
   UpdatesTitleContainer,
 } from './style'
-import updatesInfos from '../../data/updates.json'
+import updatesInfos from '../../../logs/updates.json'
 
 export default function Hero() {
   return (

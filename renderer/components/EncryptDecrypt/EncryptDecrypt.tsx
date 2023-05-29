@@ -11,6 +11,7 @@ import {
 import { FaEyeSlash, FaEye } from 'react-icons/fa'
 import { HiLockClosed, HiLockOpen } from 'react-icons/hi'
 import DragDrop from '../DragDrop/DragDrop'
+import { encryptFile, decryptFile } from '../../../scripts/crypto'
 
 interface EncryptDecryptProps {
   title: string
@@ -26,9 +27,22 @@ export default function EncryptDecrypt({
   buttonText,
 }: EncryptDecryptProps) {
   const [show, setShow] = useState(false)
+  const [password, setPassword] = useState('')
 
   const handleClick = () => {
     setShow(!show)
+  }
+
+  const handleEncryptDecrypt = () => {
+    if (actionTitle === 'criptografia') {
+      encryptFile('', password) // TODO: add file path
+    } else {
+      decryptFile('', password) // TODO: add file path
+    }
+  }
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value)
   }
 
   return (
@@ -36,10 +50,15 @@ export default function EncryptDecrypt({
       <KeyContainer>
         <PasswordTitle>{title} seus arquivos!</PasswordTitle>
         <PasswordContainer>
-          <Password type={show ? 'text' : 'password'} placeholder={`Senha para ${actionTitle}`} />
+          <Password
+            type={show ? 'text' : 'password'}
+            placeholder={`Senha para ${actionTitle}`}
+            value={password}
+            onChange={handlePasswordChange}
+          />
           <ShowPassword onClick={handleClick}>{show ? <FaEyeSlash /> : <FaEye />}</ShowPassword>
         </PasswordContainer>
-        <EncryptDecryptButton>
+        <EncryptDecryptButton onClick={handleEncryptDecrypt}>
           {icon === 'HiLockClosed' ? <HiLockClosed /> : <HiLockOpen />} {buttonText}
         </EncryptDecryptButton>
       </KeyContainer>

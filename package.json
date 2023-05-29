@@ -11,10 +11,12 @@
     "build-wl": "nextron build -wl",
     "build-m": "nextron build -m",
     "postinstall": "electron-builder install-app-deps",
-    "lint": "eslint 'renderer/**/*.{js,jsx,ts,tsx}' --quiet --fix",
-    "format": "prettier --write 'renderer/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "lint": "eslint 'renderer/**/*.{js,jsx,ts,tsx}' 'scripts/**/*.{js,jsx,ts,tsx}' --quiet --fix",
+    "format": "prettier --write 'renderer/**/*.{js,jsx,ts,tsx,css,md,json}' 'scripts/**/*.{js,jsx,ts,tsx}' --config ./.prettierrc"
   },
   "dependencies": {
+    "adm-zip": "^0.5.10",
+    "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
@@ -29,7 +31,6 @@
     "@types/react": "^18.0.26",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
-    "dmg-license": "^1.0.11",
     "electron": "^21.3.3",
     "electron-builder": "^23.6.0",
     "eslint-config-prettier": "^8.6.0",

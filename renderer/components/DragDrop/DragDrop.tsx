@@ -31,13 +31,13 @@ export default function DragDrop() {
 
   const files = acceptedFiles.map((file) => (
     <File key={file.name}>
-      {file.name} - {file.size} bytes
+      {file.name} - {(file.size / 1000000).toFixed(2)} MB
     </File>
   ))
 
   return (
     <Container>
-      <Title>Seus arquivos:</Title>
+      <Title>Seu(s) arquivo(s):</Title>
       <SelectContainer {...getRootProps({ className: 'dropzone' })}>
         <input {...getInputProps()} />
         <SelectTitle>Solte e arraste ou</SelectTitle>
