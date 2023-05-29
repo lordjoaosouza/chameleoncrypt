@@ -20,6 +20,8 @@ export const KeyContainer = styled.div`
 export const PasswordTitle = styled.h1`
   font-size: 1.5rem;
   font-weight: lighter;
+  max-width: 18rem;
+  text-align: center;
 
   &:hover {
     scale: 1.05;
@@ -60,9 +62,16 @@ export const Password = styled.input`
   color: #fff;
   text-align: center;
   width: 78%;
+  height: 100%;
+  padding: 1rem;
 
   &::placeholder {
     color: #39244a;
+  }
+
+  &:hover {
+    scale: 1.05;
+    transition: 0.25s;
   }
 `
 
@@ -101,5 +110,6 @@ export const EncryptDecryptButton = styled.a`
     background-color: #aa10de;
     scale: 1.05;
     transition: 0.25s;
+    transform-origin: center;
   }
 `

@@ -55,8 +55,6 @@ export const UpdatesTitleContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 1.5rem;
-  top: 0;
-  width: 100%;
   background-color: #2d033b;
 `
 
@@ -100,5 +98,6 @@ export const UpdatesInfo = styled.p`
   &:hover {
     scale: 1.05;
     transition: 0.25s;
+    transform-origin: left;
   }
 `

@@ -10,7 +10,7 @@ import {
 } from './style'
 import { FaEyeSlash, FaEye } from 'react-icons/fa'
 import { HiLockClosed, HiLockOpen } from 'react-icons/hi'
-// import DragDrop from '../DragDrop/DragDrop'
+import DragDrop from '../DragDrop/DragDrop'
 
 interface EncryptDecryptProps {
   title: string
@@ -43,7 +43,7 @@ export default function EncryptDecrypt({
           {icon === 'HiLockClosed' ? <HiLockClosed /> : <HiLockOpen />} {buttonText}
         </EncryptDecryptButton>
       </KeyContainer>
-      {/* <DragDrop /> */}
+      <DragDrop />
     </Container>
   )
 }

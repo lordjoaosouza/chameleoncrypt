@@ -15,10 +15,12 @@
     "format": "prettier --write 'renderer/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
+    "react-dropzone": "^14.2.3",
     "react-icons": "^4.8.0",
     "styled-components": "^6.0.0-rc.1"
   },
@@ -27,6 +29,7 @@
     "@types/react": "^18.0.26",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
+    "dmg-license": "^1.0.11",
     "electron": "^21.3.3",
     "electron-builder": "^23.6.0",
     "eslint-config-prettier": "^8.6.0",
@@ -38,9 +41,9 @@
     "next": "^12.3.4",
     "nextron": "^8.5.0",
     "prettier": "^2.8.4",
+    "prisma": "^4.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.4",
-    "dmg-license": "^1.0.11"
+    "typescript": "^4.9.4"
   }
 }
