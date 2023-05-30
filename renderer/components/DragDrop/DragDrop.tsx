@@ -37,7 +37,7 @@ export default function DragDrop() {
 
   return (
     <Container>
-      <Title>Seu(s) arquivo(s):</Title>
+      <Title>Seus arquivos:</Title>
       <SelectContainer {...getRootProps({ className: 'dropzone' })}>
         <input {...getInputProps()} />
         <SelectTitle>Solte e arraste ou</SelectTitle>

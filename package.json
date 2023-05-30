@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "adm-zip": "^0.5.10",
-    "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
