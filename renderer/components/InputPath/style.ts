@@ -51,7 +51,7 @@ export const PathContainer = styled.div`
   justify-content: center;
   border: 1px solid #810ca8;
   border-radius: 0.25rem;
-  width: 18rem;
+  width: 20rem;
   height: 2.5rem;
   padding: 1rem;
 
@@ -82,7 +82,7 @@ export const Path = styled.input`
   padding: 1rem;
 
   &::placeholder {
-    color: #39244a;
+    color: #452c5a;
   }
 
   &:hover {

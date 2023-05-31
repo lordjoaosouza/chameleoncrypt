@@ -3,11 +3,12 @@ import { AiOutlineArrowDown } from 'react-icons/ai'
 import React, { useState } from 'react'
 
 interface InputPathProps {
+  buttonText: string
   onPathChange: (path: string) => void
 }
 
-export default function InputPath({ onPathChange }: InputPathProps) {
-  const [, setPath] = useState('')
+export default function InputPath({ buttonText, onPathChange }: InputPathProps) {
+  const [path, setPath] = useState('')
 
   const handlePathChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPath(e.target.value)
@@ -16,13 +17,18 @@ export default function InputPath({ onPathChange }: InputPathProps) {
 
   return (
     <Container>
-      <Title>Seus arquivos:</Title>
+      <Title>Escolha o que {buttonText.toLowerCase()}</Title>
       <SelectContainer>
         <SelectTitle>
-          Digite o path da pasta ou arquivo <AiOutlineArrowDown />
+          Path da pasta ou arquivo:
+          <AiOutlineArrowDown />
         </SelectTitle>
         <PathContainer>
-          <Path onChange={handlePathChange} />
+          <Path
+            placeholder={'Exemplo: /home/user/Downloads'}
+            value={path}
+            onChange={handlePathChange}
+          />
         </PathContainer>
       </SelectContainer>
     </Container>

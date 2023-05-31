@@ -26,8 +26,8 @@ export const Info = styled.h1`
 `
 
 export const Image = styled.img`
-  width: 20rem;
-  height: 20rem;
+  width: 18rem;
+  height: 18rem;
   margin-top: 4rem;
   &:hover {
     scale: 1.05;

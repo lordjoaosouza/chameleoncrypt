@@ -67,7 +67,7 @@ export default function EncryptDecrypt({
           {icon === 'HiLockClosed' ? <HiLockClosed /> : <HiLockOpen />} {buttonText}
         </EncryptDecryptButton>
       </KeyContainer>
-      <InputPath onPathChange={handlePathChange} />
+      <InputPath buttonText={buttonText} onPathChange={handlePathChange} />
     </Container>
   )
 }
