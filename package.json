@@ -11,8 +11,8 @@
     "build-wl": "nextron build -wl",
     "build-m": "nextron build -m",
     "postinstall": "electron-builder install-app-deps",
-    "lint": "eslint 'renderer/**/*.{js,jsx,ts,tsx}' 'scripts/**/*.{js,jsx,ts,tsx}' --quiet --fix",
-    "format": "prettier --write 'renderer/**/*.{js,jsx,ts,tsx,css,md,json}' 'scripts/**/*.{js,jsx,ts,tsx}' --config ./.prettierrc"
+    "lint": "eslint 'renderer/**/*.{js,jsx,ts,tsx}' --quiet --fix",
+    "format": "prettier --write 'renderer/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
     "adm-zip": "^0.5.10",

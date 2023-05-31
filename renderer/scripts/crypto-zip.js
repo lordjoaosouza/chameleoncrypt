@@ -4,6 +4,7 @@ import crypto from 'crypto'
 import path from 'path'
 
 export function encryptZipFile(inputPath, password) {
+  // TODO: When zip, keep the original directory structure
   const zip = new AdmZip()
 
   const stats = fs.statSync(inputPath)
@@ -11,7 +12,7 @@ export function encryptZipFile(inputPath, password) {
 
   const key = crypto.createHash('sha256').update(password).digest('hex')
 
-  const outputFilePath = `${inputPath}.chameleon`
+  const outputFilePath = inputPath + '.encrypted.zip'
 
   const encryptedZip = new AdmZip()
 
@@ -35,8 +36,6 @@ export function encryptZipFile(inputPath, password) {
   })
 
   encryptedZip.writeZip(outputFilePath)
-
-  fs.unlinkSync(inputPath)
 }
 
 export function decryptZipFile(inputPath, password) {
@@ -46,7 +45,7 @@ export function decryptZipFile(inputPath, password) {
 
   const key = crypto.createHash('sha256').update(password).digest('hex')
 
-  const outputFilePath = inputPath.replace('.chameleon', '') + '.zip'
+  const outputFilePath = inputPath.replace('.encrypted.zip', '.decrypted.zip')
 
   encryptedZip.getEntries().forEach((entry) => {
     if (!entry.isDirectory) {
@@ -61,8 +60,4 @@ export function decryptZipFile(inputPath, password) {
   })
 
   decryptedZip.writeZip(outputFilePath)
-
-  fs.unlinkSync(inputPath)
-
-  return outputFilePath
 }

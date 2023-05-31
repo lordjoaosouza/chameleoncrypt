@@ -10,8 +10,8 @@ import {
 } from './style'
 import { FaEyeSlash, FaEye } from 'react-icons/fa'
 import { HiLockClosed, HiLockOpen } from 'react-icons/hi'
-import DragDrop from '../DragDrop/DragDrop'
-import { encryptFile, decryptFile } from '../../../scripts/crypto'
+import InputPath from '../InputPath/InputPath'
+import { encryptZipFile, decryptZipFile } from '../../scripts/crypto-zip'
 
 interface EncryptDecryptProps {
   title: string
@@ -28,6 +28,7 @@ export default function EncryptDecrypt({
 }: EncryptDecryptProps) {
   const [show, setShow] = useState(false)
   const [password, setPassword] = useState('')
+  const [path, setPath] = useState('')
 
   const handleClick = () => {
     setShow(!show)
@@ -35,14 +36,18 @@ export default function EncryptDecrypt({
 
   const handleEncryptDecrypt = () => {
     if (actionTitle === 'criptografia') {
-      encryptFile('', password) // TODO: add file path
+      encryptZipFile(path, password)
     } else {
-      decryptFile('', password) // TODO: add file path
+      decryptZipFile(path, password)
     }
   }
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value)
+  }
+
+  const handlePathChange = (newPath: string) => {
+    setPath(newPath)
   }
 
   return (
@@ -62,7 +67,7 @@ export default function EncryptDecrypt({
           {icon === 'HiLockClosed' ? <HiLockClosed /> : <HiLockOpen />} {buttonText}
         </EncryptDecryptButton>
       </KeyContainer>
-      <DragDrop />
+      <InputPath onPathChange={handlePathChange} />
     </Container>
   )
 }
