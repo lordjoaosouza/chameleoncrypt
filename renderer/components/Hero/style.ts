@@ -39,6 +39,7 @@ export const UpdatesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #2d033b;
   width: 25rem;
   height: 15rem;
@@ -49,6 +50,7 @@ export const UpdatesContainer = styled.div`
     transition: 0.25s;
   }
   position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const UpdatesTitleContainer = styled.div`

@@ -2,6 +2,7 @@ import AdmZip from 'adm-zip'
 import fs from 'fs'
 import crypto from 'crypto'
 import path from 'path'
+// import insertLog from './insert-log'
 
 export function encryptZipFile(inputPath, password) {
   // TODO: When zip, keep the original directory structure
@@ -36,9 +37,11 @@ export function encryptZipFile(inputPath, password) {
   })
 
   encryptedZip.writeZip(outputFilePath)
+
+  // insertLog('Criptografou um arquivo')
 }
 
-export function decryptZipFile(inputPath, password) {
+export function decryptZipFile(inputPath: string, password: string) {
   const encryptedZip = new AdmZip(inputPath)
 
   const decryptedZip = new AdmZip()
@@ -60,4 +63,6 @@ export function decryptZipFile(inputPath, password) {
   })
 
   decryptedZip.writeZip(outputFilePath)
+
+  // insertLog('Descriptografou um arquivo')
 }

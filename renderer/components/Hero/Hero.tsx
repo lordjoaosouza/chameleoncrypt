@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import {
   Container,
   Info,
@@ -9,9 +10,24 @@ import {
   UpdatesInfo,
   UpdatesTitleContainer,
 } from './style'
-import updatesInfos from '../../../logs/updates.json'
+// import { checkLogs } from '../../scripts/insert-log'
 
 export default function Hero() {
+  const [updatesTitle, setUpdatesTitle] = useState('Últimas atualizações:')
+  const [emptyUpdates, setEmptyUpdates] = useState(false)
+  const [updatesInfos, setUpdatesInfos] = useState([])
+
+  useEffect(() => {
+    // const logs = checkLogs()
+    const logs = []  // remove later
+    setUpdatesInfos(logs)
+
+    if (logs.length === 0) {
+      setUpdatesTitle('Nenhuma atualização!')
+      setEmptyUpdates(true)
+    }
+  }, [])
+
   return (
     <Container>
       <InfoContainer>
@@ -20,15 +36,17 @@ export default function Hero() {
       </InfoContainer>
       <UpdatesContainer>
         <UpdatesTitleContainer>
-          <UpdatesTitle>Últimas atualizações</UpdatesTitle>
+          <UpdatesTitle>{updatesTitle}</UpdatesTitle>
         </UpdatesTitleContainer>
-        <UpdatesInfoContainer>
-          {updatesInfos.map((update, index) => (
-            <UpdatesInfo key={index}>
-              {update.date} - {update.action}
-            </UpdatesInfo>
-          ))}
-        </UpdatesInfoContainer>
+        {!emptyUpdates && (
+          <UpdatesInfoContainer>
+            {updatesInfos.map((update, index) => (
+              <UpdatesInfo key={index}>
+                {update.date}, {update.time} - {update.message}
+              </UpdatesInfo>
+            ))}
+          </UpdatesInfoContainer>
+        )}
       </UpdatesContainer>
     </Container>
   )

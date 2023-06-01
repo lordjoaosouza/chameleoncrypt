@@ -14,6 +14,7 @@ export const Container = styled.div`
     scale: 1.05;
     transition: 0.25s;
   }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const Title = styled.h3`
@@ -24,6 +25,7 @@ export const Title = styled.h3`
     scale: 1.05;
     transition: 0.25s;
   }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const SelectContainer = styled.div`
@@ -67,6 +69,7 @@ export const PathContainer = styled.div`
     scale: 1.05;
     transition: 0.25s;
   }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const Path = styled.input`

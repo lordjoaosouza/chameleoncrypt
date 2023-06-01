@@ -51,6 +51,7 @@ export const PasswordContainer = styled.div`
     scale: 1.05;
     transition: 0.25s;
   }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const Password = styled.input`
@@ -92,6 +93,7 @@ export const ShowPassword = styled.a`
     scale: 1.05;
     transition: 0.25s;
   }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 `
 
 export const EncryptDecryptButton = styled.a`
@@ -112,4 +114,5 @@ export const EncryptDecryptButton = styled.a`
     transition: 0.25s;
     transform-origin: center;
   }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 `
