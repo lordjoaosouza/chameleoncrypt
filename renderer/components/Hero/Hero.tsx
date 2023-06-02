@@ -19,7 +19,7 @@ export default function Hero() {
 
   useEffect(() => {
     // const logs = checkLogs()
-    const logs = []  // remove later
+    const logs = [] // remove later
     setUpdatesInfos(logs)
 
     if (logs.length === 0) {

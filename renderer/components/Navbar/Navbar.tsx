@@ -24,7 +24,7 @@ export default function Navbar() {
           <HiLockClosed />
           Descriptografar
         </Button>
-        <Button onClick={() => handlePageClick('production')}>
+        <Button onClick={() => handlePageClick('password-vault')}>
           <MdPassword />
           Cofre de Senhas
         </Button>

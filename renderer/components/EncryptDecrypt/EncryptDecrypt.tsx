@@ -50,7 +50,7 @@ export default function EncryptDecrypt({
       } catch (err) {
         setErrorMessage(err.message)
         setShowPopup(true)
-        console.log(err.message)  // remove later
+        console.log(err.message) // remove later
       }
     } else {
       try {
@@ -58,7 +58,7 @@ export default function EncryptDecrypt({
       } catch (err) {
         setErrorMessage(err.message)
         setShowPopup(true)
-        console.log(err.message)  // remove later
+        console.log(err.message) // remove later
       }
     }
   }

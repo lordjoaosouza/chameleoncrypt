@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { app } from 'electron'
 
 interface Log {
   date: string
@@ -8,7 +7,7 @@ interface Log {
   message: string
 }
 
-const logPath = path.join(app.getPath('appData'), 'logs')
+const logPath = ''
 const updatesFilePath = path.join(logPath, 'updates.json')
 
 export function checkLogs(): Log[] {

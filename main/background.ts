@@ -4,6 +4,8 @@ import { createWindow } from './helpers';
 
 const isProd: boolean = process.env.NODE_ENV === 'production';
 
+console.log(app.getPath('userData'))
+
 if (isProd) {
   serve({ directory: 'app' });
 } else {
