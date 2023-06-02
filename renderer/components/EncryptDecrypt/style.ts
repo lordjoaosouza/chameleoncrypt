@@ -38,6 +38,7 @@ export const PasswordContainer = styled.div`
   width: 18rem;
   height: 2.5rem;
   padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
     border: 1px solid #ad10e2;
@@ -51,7 +52,6 @@ export const PasswordContainer = styled.div`
     scale: 1.05;
     transition: 0.25s;
   }
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const Password = styled.input`
@@ -88,12 +88,14 @@ export const ShowPassword = styled.a`
   background-color: #810ca8;
   width: 2.5rem;
   height: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
   &:hover {
     background-color: #aa10de;
     scale: 1.05;
     transition: 0.25s;
   }
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const EncryptDecryptButton = styled.a`
@@ -108,11 +110,13 @@ export const EncryptDecryptButton = styled.a`
   background-color: #810ca8;
   width: 18rem;
   height: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
   &:hover {
     background-color: #aa10de;
     scale: 1.05;
     transition: 0.25s;
     transform-origin: center;
   }
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `

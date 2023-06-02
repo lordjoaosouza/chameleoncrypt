@@ -10,22 +10,24 @@ export const Container = styled.div`
   height: 20rem;
   background-color: #2d033b;
   border-radius: 0.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
   }
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const Title = styled.h3`
   font-size: 1.2rem;
   font-weight: lighter;
   margin-bottom: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
   }
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const SelectContainer = styled.div`
@@ -41,6 +43,7 @@ export const SelectTitle = styled.p`
   margin-bottom: 0.6rem;
   align-items: center;
   gap: 0.25rem;
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
@@ -56,6 +59,7 @@ export const PathContainer = styled.div`
   width: 20rem;
   height: 2.5rem;
   padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
     border: 1px solid #ad10e2;
@@ -69,7 +73,6 @@ export const PathContainer = styled.div`
     scale: 1.05;
     transition: 0.25s;
   }
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const Path = styled.input`

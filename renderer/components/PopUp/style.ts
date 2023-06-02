@@ -21,6 +21,7 @@ export const PopUp = styled.div`
   padding: 3rem 6rem;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
@@ -31,6 +32,7 @@ export const Title = styled.h3`
   font-size: 1.2rem;
   font-weight: lighter;
   margin-bottom: 0.6rem;
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
@@ -50,6 +52,8 @@ export const Button = styled.a`
   width: 5rem;
   height: 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
   &:hover {
     background-color: #aa10de;
     scale: 1.05;

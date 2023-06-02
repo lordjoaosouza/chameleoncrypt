@@ -19,6 +19,7 @@ export const InfoContainer = styled.div`
 export const Info = styled.h1`
   font-size: 1.5rem;
   font-weight: bold;
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
@@ -29,6 +30,7 @@ export const Image = styled.img`
   width: 18rem;
   height: 18rem;
   margin-top: 4rem;
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
@@ -44,13 +46,13 @@ export const UpdatesContainer = styled.div`
   width: 25rem;
   height: 15rem;
   overflow: auto;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
     scale: 1.05;
     transition: 0.25s;
   }
-  position: relative;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
 
 export const UpdatesTitleContainer = styled.div`
@@ -63,6 +65,7 @@ export const UpdatesTitleContainer = styled.div`
 export const UpdatesTitle = styled.h2`
   font-size: 1rem;
   font-weight: bold;
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
@@ -79,6 +82,7 @@ export const UpdatesInfoContainer = styled.div`
   padding: 0 1rem;
 
   &::-webkit-scrollbar {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     width: 6px;
   }
   &::-webkit-scrollbar-thumb {

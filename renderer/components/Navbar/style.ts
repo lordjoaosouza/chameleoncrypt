@@ -12,6 +12,8 @@ export const Container = styled.div`
 export const Logo = styled.img`
   width: 4rem;
   height: 4rem;
+  cursor: pointer;
+
   &:hover {
     scale: 1.05;
     transition: 0.25s;
@@ -36,10 +38,12 @@ export const Button = styled.a`
   background-color: #810ca8;
   width: 8.5rem;
   height: 2.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
   &:hover {
     background-color: #aa10de;
     scale: 1.05;
     transition: 0.25s;
   }
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 `
