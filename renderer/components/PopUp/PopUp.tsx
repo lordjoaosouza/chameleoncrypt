@@ -17,6 +17,8 @@ export function ErrorPopup({ message, onClose }: PopUpProps) {
 
   if (message.includes('no such file or directory')) {
     finalMessage = 'Arquivo ou diretório não encontrado'
+  } else if(message.includes('illegal operation on a directory, read')) {
+    finalMessage = 'O arquivo não pode ser um diretório'
   } else if (message.includes('Cipher functions:OPENSSL_internal:BAD_DECRYPT')) {
     finalMessage = 'Senha para descriptografia incorreta'
   } else if (message.includes('Invalid or unsupported zip format')) {
