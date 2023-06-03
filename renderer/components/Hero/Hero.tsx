@@ -34,7 +34,7 @@ export default function Hero() {
         <Info>Comece a proteger suas informações!</Info>
         <Image src='hero.svg' alt='hero' />
       </InfoContainer>
-      <UpdatesContainer>
+      {/* <UpdatesContainer>
         <UpdatesTitleContainer>
           <UpdatesTitle>{updatesTitle}</UpdatesTitle>
         </UpdatesTitleContainer>
@@ -47,7 +47,7 @@ export default function Hero() {
             ))}
           </UpdatesInfoContainer>
         )}
-      </UpdatesContainer>
+      </UpdatesContainer> */}
     </Container>
   )
 }

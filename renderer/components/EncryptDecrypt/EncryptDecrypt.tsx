@@ -12,7 +12,7 @@ import { FaEyeSlash, FaEye } from 'react-icons/fa'
 import { HiLockClosed, HiLockOpen } from 'react-icons/hi'
 import InputPath from '../InputPath/InputPath'
 import { encryptZipFile, decryptZipFile } from '../../scripts/crypto-zip'
-import ErrorPopup from '../PopUp/PopUp'
+import { ErrorPopup, EncryptDecryptPopUp, DonePopUp } from '../PopUp/PopUp'
 
 interface EncryptDecryptProps {
   title: string
@@ -32,6 +32,10 @@ export default function EncryptDecrypt({
   const [path, setPath] = useState('')
   const [showPopup, setShowPopup] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
+  const [showEncryptDecryptPopUp, setShowEncryptDecryptPopUp] = useState(false)
+  const [encryptDecryptMessage, setEncryptDecryptMessage] = useState('')
+  const [donePopUpMessage, setDonePopUpMessage] = useState('')
+  const [showDonePopUp, setShowDonePopUp] = useState(false)
 
   const handleClick = () => {
     setShow(!show)
@@ -42,29 +46,45 @@ export default function EncryptDecrypt({
       setErrorMessage('Password error')
       setShowPopup(true)
       return
+    } else if (path === '') {
+      setErrorMessage('Empty path')
+      setShowPopup(true)
+      return
     }
 
     if (actionTitle === 'criptografia') {
-      try {
-        encryptZipFile(path, password)
-      } catch (err) {
-        setErrorMessage(err.message)
-        setShowPopup(true)
-        console.log(err.message) // remove later
-      }
-    } else {
-      try {
-        decryptZipFile(path, password)
-      } catch (err) {
-        setErrorMessage(err.message)
-        setShowPopup(true)
-        console.log(err.message) // remove later
-      }
-    }
-  }
+      setEncryptDecryptMessage('Criptografando')
+      setShowEncryptDecryptPopUp(true)
 
-  const handleClosePopup = () => {
-    setShowPopup(false)
+      setTimeout(() => {
+        try {
+          encryptZipFile(path, password)
+          setShowEncryptDecryptPopUp(false)
+          setDonePopUpMessage('Criptografia completa')
+          setShowDonePopUp(true)
+        } catch (err) {
+          setShowEncryptDecryptPopUp(false)
+          setErrorMessage(err.message)
+          setShowPopup(true)
+        }
+      }, 0)
+    } else {
+      setEncryptDecryptMessage('Descriptografando')
+      setShowEncryptDecryptPopUp(true)
+
+      setTimeout(() => {
+        try {
+          decryptZipFile(path, password)
+          setShowEncryptDecryptPopUp(false)
+          setDonePopUpMessage('Descriptografia completa')
+          setShowDonePopUp(true)
+        } catch (err) {
+          setShowEncryptDecryptPopUp(false)
+          setErrorMessage(err.message)
+          setShowPopup(true)
+        }
+      }, 0)
+    }
   }
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -93,7 +113,11 @@ export default function EncryptDecrypt({
         </EncryptDecryptButton>
       </KeyContainer>
       <InputPath buttonText={buttonText} onPathChange={handlePathChange} />
-      {showPopup && <ErrorPopup message={errorMessage} onClose={handleClosePopup} />}
+      {showPopup && <ErrorPopup message={errorMessage} onClose={() => setShowPopup(false)} />}
+      {showEncryptDecryptPopUp && <EncryptDecryptPopUp message={encryptDecryptMessage} />}
+      {showDonePopUp && (
+        <DonePopUp message={donePopUpMessage} onClose={() => setShowDonePopUp(false)} />
+      )}
     </Container>
   )
 }

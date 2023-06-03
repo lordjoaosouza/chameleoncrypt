@@ -191,3 +191,10 @@ export const Parameter = styled(Switch)`
     color: #aa10de !important;
   }
 `
+
+export const ParameterError = styled.p`
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: lighter;
+`

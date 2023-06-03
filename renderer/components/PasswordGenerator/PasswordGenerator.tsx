@@ -14,6 +14,7 @@ import {
   ParameterContainer,
   ParameterLabel,
   Parameter,
+  ParameterError,
 } from './style'
 import { IoCopy } from 'react-icons/io5'
 import generatePassword from '../../scripts/password-generator'
@@ -25,6 +26,7 @@ export default function PasswordGenerator() {
   const [useNumbers, setUseNumbers] = useState(true)
   const [useSpecial, setUseSpecial] = useState(true)
   const [password, setPassword] = useState('')
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     setPassword(generatePassword(sliderValue, useUppercase, useLowercase, useNumbers, useSpecial))
@@ -34,39 +36,47 @@ export default function PasswordGenerator() {
     setPassword(generatePassword(sliderValue, useUppercase, useLowercase, useNumbers, useSpecial))
   }
 
-  const handleSliderChange = (event: { target: { value: string } }) => {
+  const handleSliderChange = (event) => {
     setSliderValue(parseInt(event.target.value))
   }
 
   const handleUppercaseChange = () => {
     if (useLowercase || useNumbers || useSpecial) {
       setUseUppercase(!useUppercase)
+      setError(false)
     } else {
       setUseUppercase(true)
+      setError(true)
     }
   }
 
   const handleLowercaseChange = () => {
     if (useUppercase || useNumbers || useSpecial) {
       setUseLowercase(!useLowercase)
+      setError(false)
     } else {
       setUseLowercase(true)
+      setError(true)
     }
   }
 
   const handleNumbersChange = () => {
     if (useUppercase || useLowercase || useSpecial) {
       setUseNumbers(!useNumbers)
+      setError(false)
     } else {
       setUseNumbers(true)
+      setError(true)
     }
   }
 
   const handleSpecialChange = () => {
     if (useUppercase || useLowercase || useNumbers) {
       setUseSpecial(!useSpecial)
+      setError(false)
     } else {
       setUseSpecial(true)
+      setError(true)
     }
   }
 
@@ -108,6 +118,7 @@ export default function PasswordGenerator() {
             <Parameter checked={useSpecial} onChange={handleSpecialChange} />
           </ParameterContainer>
         </ParamertersContainer>
+        {error && <ParameterError>Pelo menos um parâmetro deve estar selecionado</ParameterError>}
       </OptionsContainer>
     </Container>
   )

@@ -26,7 +26,7 @@ export default function Navbar() {
         </Button>
         <Button onClick={() => handlePageClick('password-vault')}>
           <MdPassword />
-          Cofre de Senhas
+          Gerador de Senhas
         </Button>
       </Buttons>
     </Container>
