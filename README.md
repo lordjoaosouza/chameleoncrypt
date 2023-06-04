@@ -1,38 +1,37 @@
-<p align="center"><img src="https://i.imgur.com/NZfsD1p.png"></p>
+# ChameleonCrypt
 
-## Usage
+Protect your data easily!
 
-### Create an App
+<p align="center">
+  <img 
+      style="width: 15%;"
+      src="https://raw.githubusercontent.com/lordjoaosouza/chameleoncrypt/master/icons/icon.png" 
+      alt="Icon">
+  </img>
+</p>
 
+## Features
+
+- Encrypt/Decrypt directory or file
+- Password generator
+- Password vault (next version)
+- Cross platform
+- Offiline application
+
+## Installation
+
+Install ChameleonCrypt with npm or yarn
+
+```bash
+  npm install
+  npm run build
 ```
-# with npx
-$ npx create-nextron-app my-app --example basic-typescript
-
-# with yarn
-$ yarn create nextron-app my-app --example basic-typescript
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example basic-typescript
+or 
+```bash
+  yarn
+  yarn build
 ```
 
-### Install Dependencies
-
-```
-$ cd my-app
-
-# using yarn or npm
-$ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
-
-### Use it
-
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+If you prefer to download already builded:
+* [Linux](https://github.com/lordjoaosouza/chameleoncrypt/releases/download/v1.0.0/Linux.ChameleonCrypt.v1.0.0.AppImage)
+* [Windows](https://github.com/lordjoaosouza/chameleoncrypt/releases/download/v1.0.0/Windows.ChameleonCrypt.v1.0.0.exe)
