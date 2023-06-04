@@ -16,7 +16,7 @@ Protect your data easily!
 - Password generator
 - Password vault (next version)
 - Cross platform
-- Offiline application
+- Offline application
 
 ## Installation
 
