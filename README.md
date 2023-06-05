@@ -4,7 +4,7 @@ Protect your data easily!
 
 <p align="center">
   <img 
-      style="width: 15%;"
+      style="width: 25%;"
       src="https://raw.githubusercontent.com/lordjoaosouza/chameleoncrypt/master/icons/icon.png" 
       alt="Icon">
   </img>
