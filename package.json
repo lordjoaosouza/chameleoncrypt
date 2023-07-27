@@ -2,7 +2,7 @@
   "private": true,
   "name": "chameleoncrypt",
   "description": "Encrypt your data safely",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "ChameleonCrypt",
   "main": "app/background.js",
   "scripts": {
