@@ -17,15 +17,15 @@ export default function InputPath({ buttonText, onPathChange }: InputPathProps) 
 
   return (
     <Container>
-      <Title>Escolha o que {buttonText.toLowerCase()}</Title>
+      <Title>Choose what to {buttonText.toLowerCase()}</Title>
       <SelectContainer>
         <SelectTitle>
-          Path da pasta ou arquivo:
+          File or folder:
           <AiOutlineArrowDown />
         </SelectTitle>
         <PathContainer>
           <Path
-            placeholder={'Exemplo: /home/user/Downloads'}
+            placeholder={'E.g.: /home/user/Downloads'}
             value={path}
             onChange={handlePathChange}
           />

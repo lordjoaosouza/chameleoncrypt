@@ -52,15 +52,15 @@ export default function EncryptDecrypt({
       return
     }
 
-    if (actionTitle === 'criptografia') {
-      setEncryptDecryptMessage('Criptografando')
+    if (actionTitle === 'encrypt') {
+      setEncryptDecryptMessage('Encrypting')
       setShowEncryptDecryptPopUp(true)
 
       setTimeout(() => {
         try {
           encryptZipFile(path, password)
           setShowEncryptDecryptPopUp(false)
-          setDonePopUpMessage('Criptografia completa')
+          setDonePopUpMessage('Encryption done')
           setShowDonePopUp(true)
         } catch (err) {
           setShowEncryptDecryptPopUp(false)
@@ -69,14 +69,14 @@ export default function EncryptDecrypt({
         }
       }, 0)
     } else {
-      setEncryptDecryptMessage('Descriptografando')
+      setEncryptDecryptMessage('Decrypting')
       setShowEncryptDecryptPopUp(true)
 
       setTimeout(() => {
         try {
           decryptZipFile(path, password)
           setShowEncryptDecryptPopUp(false)
-          setDonePopUpMessage('Descriptografia completa')
+          setDonePopUpMessage('Decryption done')
           setShowDonePopUp(true)
         } catch (err) {
           setShowEncryptDecryptPopUp(false)
@@ -98,11 +98,11 @@ export default function EncryptDecrypt({
   return (
     <Container>
       <KeyContainer>
-        <PasswordTitle>{title} seus arquivos!</PasswordTitle>
+        <PasswordTitle>{title} your data</PasswordTitle>
         <PasswordContainer>
           <Password
             type={show ? 'text' : 'password'}
-            placeholder={`Senha para ${actionTitle}`}
+            placeholder={`Password to ${actionTitle}`}
             value={password}
             onChange={handlePasswordChange}
           />

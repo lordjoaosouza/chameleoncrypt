@@ -8,28 +8,28 @@ interface PopUpProps {
 
 export function ErrorPopup({ message, onClose }: PopUpProps) {
   const messages = {
-    'Invalid filename': 'Arquivo não encontrado no diretório',
-    'Password error': 'Senha não pode ser vazia',
-    'Empty path': 'O path não pode ser vazio',
+    'Invalid filename': 'File do not found in this path',
+    'Password error': 'Password must not be empty',
+    'Empty path': 'Path must not be empty',
   }
 
   let finalMessage = messages[message] || message
 
   if (message.includes('no such file or directory')) {
-    finalMessage = 'Arquivo ou diretório não encontrado'
-  } else if(message.includes('illegal operation on a directory, read')) {
-    finalMessage = 'O arquivo não pode ser um diretório'
+    finalMessage = 'No such file or directory'
+  } else if (message.includes('illegal operation on a directory, read')) {
+    finalMessage = 'File must not be a directory'
   } else if (message.includes('Cipher functions:OPENSSL_internal:BAD_DECRYPT')) {
-    finalMessage = 'Senha para descriptografia incorreta'
+    finalMessage = 'Decryption password is wrong'
   } else if (message.includes('Invalid or unsupported zip format')) {
-    finalMessage = 'O arquivo não foi criptografado previamente'
+    finalMessage = 'File was not encrypted before'
   }
 
   return (
     <Container>
       <PopUp>
         <Title>{finalMessage}!</Title>
-        <Button onClick={onClose}>Fechar</Button>
+        <Button onClick={onClose}>Close</Button>
       </PopUp>
     </Container>
   )
@@ -50,7 +50,7 @@ export function DonePopUp({ message, onClose }: PopUpProps) {
     <Container>
       <PopUp>
         <Title>{message}!</Title>
-        <Button onClick={onClose}>Fechar</Button>
+        <Button onClick={onClose}>Close</Button>
       </PopUp>
     </Container>
   )

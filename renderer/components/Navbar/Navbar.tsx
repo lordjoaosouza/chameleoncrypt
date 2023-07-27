@@ -18,15 +18,15 @@ export default function Navbar() {
       <Buttons>
         <Button onClick={() => handlePageClick('encrypt')}>
           <HiLockOpen />
-          Criptografar
+          Encrypt
         </Button>
         <Button onClick={() => handlePageClick('decrypt')}>
           <HiLockClosed />
-          Descriptografar
+          Decrypt
         </Button>
         <Button onClick={() => handlePageClick('password-vault')}>
           <MdPassword />
-          Gerador de Senhas
+          Password Vault
         </Button>
       </Buttons>
     </Container>

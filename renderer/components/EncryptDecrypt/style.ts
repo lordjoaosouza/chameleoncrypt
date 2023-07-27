@@ -67,7 +67,7 @@ export const Password = styled.input`
   padding: 1rem;
 
   &::placeholder {
-    color: #39244a;
+    color: #925cbe;
   }
 
   &:hover {

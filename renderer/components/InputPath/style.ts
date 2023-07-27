@@ -88,7 +88,7 @@ export const Path = styled.input`
   padding: 1rem;
 
   &::placeholder {
-    color: #452c5a;
+    color: #925cbe;
   }
 
   &:hover {

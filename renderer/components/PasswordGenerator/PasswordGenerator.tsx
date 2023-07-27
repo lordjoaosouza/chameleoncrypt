@@ -86,39 +86,39 @@ export default function PasswordGenerator() {
 
   return (
     <Container>
-      <Title>Gerador de senhas</Title>
+      <Title>Password generator</Title>
       <PasswordContainer>
         <Password>{password}</Password>
         <CopyIcon onClick={copyPassword}>
           <IoCopy />
         </CopyIcon>
       </PasswordContainer>
-      <Button onClick={generateNewPassword}>Gerar nova senha</Button>
+      <Button onClick={generateNewPassword}>Generate new password</Button>
 
       <OptionsContainer>
         <SliderContainer>
           <SliderStyled min={8} max={256} value={sliderValue} onChange={handleSliderChange} />
-          <SliderValue>{sliderValue} caracteres</SliderValue>
+          <SliderValue>{sliderValue} characters</SliderValue>
         </SliderContainer>
         <ParamertersContainer>
           <ParameterContainer>
-            <ParameterLabel>Maiúsculas</ParameterLabel>
+            <ParameterLabel>Uppers</ParameterLabel>
             <Parameter checked={useUppercase} onChange={handleUppercaseChange} />
           </ParameterContainer>
           <ParameterContainer>
-            <ParameterLabel>Minúsculas</ParameterLabel>
+            <ParameterLabel>Lowers</ParameterLabel>
             <Parameter checked={useLowercase} onChange={handleLowercaseChange} />
           </ParameterContainer>
           <ParameterContainer>
-            <ParameterLabel>Números</ParameterLabel>
+            <ParameterLabel>Numbers</ParameterLabel>
             <Parameter checked={useNumbers} onChange={handleNumbersChange} />
           </ParameterContainer>
           <ParameterContainer>
-            <ParameterLabel>Especiais</ParameterLabel>
+            <ParameterLabel>Specials</ParameterLabel>
             <Parameter checked={useSpecial} onChange={handleSpecialChange} />
           </ParameterContainer>
         </ParamertersContainer>
-        {error && <ParameterError>Pelo menos um parâmetro deve estar selecionado</ParameterError>}
+        {error && <ParameterError>At least one parameter must be selected!</ParameterError>}
       </OptionsContainer>
     </Container>
   )

@@ -13,7 +13,7 @@ import {
 // import { checkLogs } from '../../scripts/insert-log'
 
 export default function Hero() {
-  const [updatesTitle, setUpdatesTitle] = useState('Últimas atualizações:')
+  const [updatesTitle, setUpdatesTitle] = useState('Last updates:')
   const [emptyUpdates, setEmptyUpdates] = useState(false)
   const [updatesInfos, setUpdatesInfos] = useState([])
 
@@ -23,7 +23,7 @@ export default function Hero() {
     setUpdatesInfos(logs)
 
     if (logs.length === 0) {
-      setUpdatesTitle('Nenhuma atualização!')
+      setUpdatesTitle('No updates!')
       setEmptyUpdates(true)
     }
   }, [])
@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <Container>
       <InfoContainer>
-        <Info>Comece a proteger suas informações!</Info>
+        <Info>Start protecting your data!</Info>
         <Image src='hero.svg' alt='hero' />
       </InfoContainer>
       {/* <UpdatesContainer>

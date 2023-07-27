@@ -8,7 +8,7 @@ export default function Production() {
   return (
     <React.Fragment>
       <Head>
-        <title>ChameleonCrypt - Cofre de Senhas</title>
+        <title>ChameleonCrypt - Password vault</title>
       </Head>
       <GlobalStyle />
       <Navbar />
