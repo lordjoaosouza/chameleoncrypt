@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero/Hero'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <React.Fragment>
       <Head>

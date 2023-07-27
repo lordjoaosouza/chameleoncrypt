@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar/Navbar'
 import EncryptDecrypt from '../components/EncryptDecrypt/EncryptDecrypt'
 
-export default function Encrypt() {
+export default function DecryptPage() {
   return (
     <React.Fragment>
       <Head>
