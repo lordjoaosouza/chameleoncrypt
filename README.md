@@ -33,5 +33,5 @@ or
 ```
 
 If you prefer to download already builded:
-* [Linux](https://github.com/lordjoaosouza/chameleoncrypt/releases/download/v1.0.0/Linux.ChameleonCrypt.v1.0.0.AppImage)
-* [Windows](https://github.com/lordjoaosouza/chameleoncrypt/releases/download/v1.0.0/Windows.ChameleonCrypt.v1.0.0.exe)
+* [Linux](https://github.com/lordjoaosouza/chameleoncrypt/releases/download/v1.0.0/Linux.ChameleonCrypt.v1.0.1.AppImage)
+* [Windows](https://github.com/lordjoaosouza/chameleoncrypt/releases/download/v1.0.0/Windows.ChameleonCrypt.v1.0.1.exe)
