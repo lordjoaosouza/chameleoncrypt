@@ -5,7 +5,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './tool
 interface ButtonWithTooltipProps {
   content: ReactElement
   tooltip: string
-  onClick: () => void
+  onClick?: () => void
 }
 
 export default function ButtonWithTooltip(props: ButtonWithTooltipProps) {
