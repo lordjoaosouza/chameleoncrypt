@@ -13,13 +13,13 @@ export default function Aside() {
   return (
     <div className={'flex'}>
       <div
-        className={`text-primaryText flex h-screen flex-col items-center gap-16 bg-background px-4 py-8 transition-all duration-300 ${collapsed ? 'w-16' : 'w-32'}`}
+        className={`text-primaryText flex h-full flex-col items-center gap-4 bg-background px-4 py-8 transition-all duration-300 ${collapsed ? 'w-16' : 'w-32'}`}
       >
-        <AsideHeader collapsed={collapsed} setCollapsed={setCollapsed} />
+        <AsideHeader collapsed={collapsed} />
 
         <AsideContent collapsed={collapsed} />
 
-        <AsideFooter collapsed={collapsed} />
+        <AsideFooter collapsed={collapsed} setCollapsed={setCollapsed} />
       </div>
 
       <Separator orientation={'vertical'} />

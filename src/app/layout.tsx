@@ -4,7 +4,8 @@ import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
 import React from 'react'
 
-import { ThemeProvider } from '../components/theme/theme-provider'
+import Aside from '@/components/aside/aside'
+import { ThemeProvider } from '@/components/theme/theme-provider'
 
 export const metadata: Metadata = {
   title: 'Chameleoncrypt',
@@ -25,7 +26,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className={'flex h-screen w-screen'}>
+            <Aside />
+            <div className={'flex w-full items-center justify-center'}>{children}</div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
